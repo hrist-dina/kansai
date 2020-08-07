@@ -1,0 +1,92 @@
+.header
+	border-bottom: 1px solid rgba(5, 36, 2, 0.3)
+.header-top
+	background: #0A3506
+	padding: 16px 0
+	.container
+		display: flex
+		align-items: center
+		justify-content: space-between
+	a
+		font-family: 'Roboto'
+		font-size: 13px
+		line-height: 15px
+		color: #FFFFFF
+		text-decoration: none
+	&--left
+		a
+			padding-right: 20px
+			margin-right: 20px
+			border-right: 1px solid #8E8E8E
+			&:last-child
+				padding-right: 0
+				margin-left: 0
+				border: none
+	&--right
+		display: flex
+		justify-content: space-between
+		a
+			margin-right: 24px
+			&:last-child
+				margin-right: 0
+.header-top-block
+	flex-basis: 50%
+	position: relative
+	.location
+		align-self: flex-start
+		border-bottom: 1px dashed #FFFFFF
+
+.download
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		right: -15px
+		transform: translateY(-50%)
+		display: block
+		width: 8px
+		height: 11px
+		background: url('../../../img/arrow-load.svg')
+
+.header-main
+	padding: 20px 0
+	.container
+		display: flex
+		align-items: center
+		justify-content: space-between
+.header-main-block
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-basis: 50%
+	.mail
+		font-family: 'Roboto'
+		font-style: italic
+		font-size: 15px
+		line-height: 18px
+		color: #C51D1B
+		text-decoration: none
+
+.schedule
+	font-family: 'Roboto'
+	p
+		font-size: 14px
+		line-height: 16px
+		color: #807A7A
+		margin-bottom: 8px
+	a
+		font-weight: 500
+		font-size: 16px
+		line-height: 19px
+		color: #222222
+		margin-right: 12px
+		border-bottom: 1px dashed #0A3506
+		text-decoration: none
+	span
+		font-size: 14px
+		line-height: 16px
+		color: #545454
+
+
+		
