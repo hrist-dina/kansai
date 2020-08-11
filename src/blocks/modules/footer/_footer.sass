@@ -1,14 +1,30 @@
 footer
-	padding: 30px 0 70px
+	@include sm-block
+		padding: 30px 0 70px
+	padding: 20px 0 30px
 	background: #0A3506
+	.yamogu &
+		background-color: #844894
+		background-image: url('../img/pattern/yamogu-footer.svg')
+		background-position: bottom
+		background-repeat: repeat-x
 .footer
 	display: flex
 	align-items: center
 	justify-content: space-between
+	flex-wrap: wrap
+	@include lg-block
+		flex-wrap: nowrap
 	ul
-		font-family: 'Roboto'
+		@include lg-block
+			margin-left: 0
+		@include sm-block
+			padding: 0 25px 0 40px
+			margin-left: auto
+			margin-right: 0
 		list-style: none
-		padding: 0 25px 0 40px
+		margin-right: auto
+
 		li
 			margin-bottom: 16px
 			&:last-child
@@ -18,18 +34,39 @@ footer
 			line-height: 16px
 			color: #FFFFFF
 			text-decoration: none
-
+.footer-logo
+	@include sm-block
+		width: auto
+		margin-bottom: 0
+	width: 100%
+	margin-bottom: 20px
 
 .footer-block
 	display: flex
 	align-items: center
+	width: 100%
+	flex-wrap: wrap
+	@include lg-block
+		width: auto
+		& + &
+			margin-top: 0
+	@include md-block
+		flex-wrap: nowrap
+
+	& + &
+		margin-top: 30px
 
 .footer-schedule
-	font-family: 'Roboto'
 	font-size: 14px
 	line-height: 16px
 	color: #FFFFFF
-	padding-right: 80px
+	padding-right: 30px
+	margin-bottom: 20px
+	@include lg-block
+		padding-right: 80px
+	@include md-block
+		margin-bottom: 0
+
 	p 
 		margin-bottom: 16px
 	span
@@ -38,16 +75,27 @@ footer
 
 
 .footer-box
+	@include lg-block
+		display: inline-block
+		width: auto
+	@include md-block
+		width: 70%
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+	display: flex
+	width: 100%
+	flex-direction: column
+	align-items: flex-start
+
 	.mail
 		display: block
-		font-family: 'Roboto'
 		font-size: 14px
 		line-height: 16px
 		color: #FFFFFF
 		margin: 16px 0
 		text-decoration: none
 	.phone
-		font-family: 'Roboto'
 		font-weight: 500
 		font-size: 15px
 		line-height: 18px

@@ -1,0 +1,18 @@
+include ../../components/slider/slider
+include ../../components/form/form
+
+mixin map-section
+    - const getName = () => kansai ? 'KANSAI в ТЦ' : 'Yamogu в ТЦ'
+    section.map-section
+        .container
+            .map-section__inner.js-tab
+                article.map-section__nav
+                    span.map-section__nav-item.js-tab-nav(data-tab='tc').active
+                        span.map-section__nav-text ТЦ Семёновский
+                    span.map-section__nav-item.js-tab-nav(data-tab='shop')
+                        span.map-section__nav-text=getName()
+                article.map-section__tab-list.js-tab-content
+                    article.map-section__tab(data-tab-content='tc').active
+                        img(src='img/map/tc.png' alt='ТЦ Семёновский')
+                    article.map-section__tab(data-tab-content='shop')
+                        img(src=`img/map/${kansai ? 'kansai': 'yamogu'}.png` alt=getName())

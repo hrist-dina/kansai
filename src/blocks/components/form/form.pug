@@ -1,0 +1,22 @@
+
+mixin form
+    .form
+        .form__head
+            .form__title Заполните поля получите скидку!
+        form.form__body
+            .form__feilds
+                .form__row
+                    +field('email', 'Почта', true)
+                .form__row
+                    +field('phone', 'Телефон', true)
+                .form__row
+                    +field('name', 'Имя', true)
+            .form__agree
+                | Нажимая на кнопку Вы даёте согласние на обработку персональных данных и соглашаетесь с
+                |
+                |
+                a(href='#') политихой конфиденциальности
+            .form__button
+                button.button.button--submit Получить скидку 30%
+
+

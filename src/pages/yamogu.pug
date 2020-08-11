@@ -1,0 +1,17 @@
+extends ../views/layouts/default
+block variables
+    - var title = "YaMogu"
+    - var kansai = false;
+    - var yamogu = true;
+
+block content
+    include ../blocks/modules/first-screen/first-screen
+    include ../blocks/modules/text-with-bubbles/text-with-bubbles
+    include ../blocks/modules/map-section/map-section
+
+    include ../blocks/modules/header/header
+    main.pattern.pattern--yamogu
+        +first-screen
+        +text-with-bubbles
+        +map-section
+    include ../blocks/modules/footer/footer

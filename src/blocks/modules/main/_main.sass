@@ -6,56 +6,88 @@
 	align-items: center
 	width: 100%
 	height: 100vh
+	flex-direction: column
+	@include lg-block
+		flex-direction: row
 
 .main-block
 	display: flex
 	flex-direction: column
 	justify-content: space-between
-	flex-basis: 50%
-	height: 100%
-	padding-top: 80px
-	padding-bottom: 155px
-	img
-		align-self: flex-start
+	align-items: flex-start
+	flex-basis: 100%
+	width: 100%
+	height: auto
+
+	@include lg-block
+		flex-basis: 50%
+		height: 100%
+		padding-top: 80px
+		padding-bottom: 155px
+
 	a
 		display: inline-block
-		align-self: flex-start
-		font-family: 'Roboto'
 		font-style: normal
 		font-weight: normal
 		font-size: 18px
 		line-height: 21px
 		color: #FFFFFF
 		text-decoration: none
-		padding: 30px 108px 30px 50px
+		padding: 20px 80px 20px 40px
 		border: 1px solid #FFFFFF
 		border-radius: 70px
-		background: url('../../../img/arrow-btn.svg') no-repeat center right 50px
+		background: url('../img/arrow-btn.svg') no-repeat center right 30px
 		transition: 0.3s ease
+		margin-top: 40px
 		&:hover
-			background: url('../../../img/arrow-btn.svg') no-repeat center right 25px
+			background: url('../img/arrow-btn.svg') no-repeat center right 20px
+
+		@include sm-block
+			padding: 30px 108px 30px 50px
+			background-position: center right 50px
+			&:hover
+				background-position: center right 25px
+	img
+		margin-top: 20px
+		max-width: 100%
 .main-left
-	background: url('../../../img/main-left.jpg') no-repeat
+	background: url('../img/main-left.jpg') no-repeat
 	background-size: cover
-	padding-left: 320px
+	align-items: center
+	padding: 30px
+
+	@include lg-block
+		padding-right: 14%
+		padding-left: 40px
+		align-items: flex-end
+
 	h1
 		max-width: 280px
-		font-family: 'Roboto'
 		font-style: normal
 		font-weight: 500
-		font-size: 68px
-		line-height: 80px
+		font-size: 48px
+		line-height: 52px
 		color: #FFFFFF
+		@include lg-block
+			font-size: 68px
+			line-height: 80px
 
 .main-right
-	background: url('../../../img/main-right.jpg') no-repeat
+	background: url('../img/main-right.jpg') no-repeat
 	background-size: cover
-	padding-left: 130px
+	padding: 30px
+	align-items: center
+	@include lg-block
+		padding-left: 130px
+		align-items: flex-start
 	h1
 		max-width: 242px
-		font-family: 'Fregat'
+		font-family: 'Fregat', sans-serif
 		font-style: normal
 		font-weight: normal
-		font-size: 68px
-		line-height: 80px
+		font-size: 48px
+		line-height: 52px
 		color: #FFFFFF
+		@include lg-block
+			font-size: 68px
+			line-height: 80px

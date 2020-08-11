@@ -1,0 +1,78 @@
+.button {
+    border: none;
+    box-sizing: border-box;
+    background: #C51D1B;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    padding: 16px;
+    cursor: pointer;
+
+    &--submit {
+        width: 100%;
+    }
+}
+
+.field {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 51px;
+    background: #fff;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+
+    &__placeholder {
+        @include transitionEaseOutQuint((top, font-size));
+        display: inline-flex;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        top: 17px;
+        left: 28px;
+        width: auto;
+        font-size: 15px;
+        line-height: 18px;
+        color: rgba(119, 119, 119, .5);
+        cursor: pointer;
+        background: #fff;
+
+        &-req {
+            color: rgba(197, 29, 27, .5);
+        }
+
+        &-text {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__input {
+        @include outline-none;
+        width: 100%;
+        height: 51px;
+        padding: 17px 28px 16px;
+        border: none;
+        background: transparent;
+        font-size: 15px;
+        line-height: 18px;
+        color: #777777;
+
+        &[type=number]:not(:focus)::-webkit-inner-spin-button, &[type=number]:not(:focus)::-webkit-outer-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+        }
+    }
+
+    &.active &__placeholder {
+        top: -10px;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+    }
+}

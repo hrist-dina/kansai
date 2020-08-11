@@ -5,6 +5,13 @@ block variables
 	- var yamogu = false;
 	
 block content
+	include ../blocks/modules/first-screen/first-screen
+	include ../blocks/modules/text-with-swiper/text-with-swiper
+	include ../blocks/modules/map-section/map-section
+
 	include ../blocks/modules/header/header
-	include ../blocks/components/slider/slider
+	main.pattern.pattern--kansai
+		+first-screen
+		+text-with-swiper
+		+map-section
 	include ../blocks/modules/footer/footer

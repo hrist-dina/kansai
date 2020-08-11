@@ -1,0 +1,60 @@
+.form {
+    background: #fff;
+    border: 1px solid #28A71C;
+
+    .yamogu & {
+        border-radius: 50px;
+        overflow: hidden;
+        font-family: Fregat, sans-serif;
+    }
+
+    &__head {
+        background-image: url(form-pattern());
+        background-size: contain;
+        background-color: #16940A;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include lg-block {
+            max-width: 290px;
+        }
+        margin: auto;
+    }
+
+    &__body {
+        @include xl-block {
+            padding: 41px 54px 29px;
+        }
+        @include sm-block {
+            padding: 30px;
+        }
+        padding: 20px;
+    }
+
+    &__row {
+        margin-bottom: 20px;
+    }
+
+    &__agree {
+        margin-top: 28px;
+        font-size: 11px;
+        line-height: 13px;
+        color: #9A9999;
+
+        & a {
+            color: #9A9999;
+            text-decoration-line: underline;
+        }
+    }
+
+    &__button {
+        margin-top: 28px;
+    }
+}

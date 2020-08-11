@@ -1,0 +1,68 @@
+.text-with-swiper {
+    @include lg-block {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background: #F8F8F8;
+    z-index: -1;
+    overflow: hidden;
+
+    &__inner {
+        @include row-flex;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__data {
+        @include col;
+        @include size-lg(5);
+        @include size(12);
+    }
+
+    &__slider {
+        @include col;
+        @include size-lg(7);
+        @include size(12);
+        @include lg-block {
+            min-height: auto;
+            margin-top: 0;
+        }
+        @include sm-block {
+            min-height: 500px;
+        }
+        margin-top: 30px;
+    }
+
+    &__title {
+        @include lg-block {
+            margin-bottom: 49px;
+            font-size: 50px;
+            line-height: 59px;
+        }
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: #C51D1B;
+        max-width: 409px;
+    }
+
+    &__content,
+    &__content p {
+        font-size: 15px;
+        line-height: 24px;
+        color: #545151;
+        @include sm-block {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    &__content {
+        p + p {
+            margin-top: 15px;
+        }
+    }
+}

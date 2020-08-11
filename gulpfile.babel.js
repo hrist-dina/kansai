@@ -127,7 +127,7 @@ export const smartGrid = cb => {
 		outputStyle: "scss",
 		filename: "_smart-grid",
 		columns: 12, // number of grid columns
-		offset: "30px", // gutter width
+		offset: "40px", // gutter width
 		mobileFirst: true,
 		mixinNames: {
 			container: "container"
@@ -163,6 +163,7 @@ export const views = () => gulp.src(paths.views.src)
 	}))
 	.pipe(gulpif(production, replace("main.css", "main.min.css")))
 	.pipe(gulpif(production, replace("main.js", "main.min.js")))
+	.pipe(gulpif(production, replace("vendor.js", "vendor.min.js")))
 	.pipe(gulp.dest(paths.views.dist))
 	.on("end", browsersync.reload);
 

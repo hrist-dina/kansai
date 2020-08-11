@@ -1,0 +1,100 @@
+.map-section {
+    @include lg-block {
+        margin-top: 118px;
+        padding-bottom: 80px;
+    }
+    margin-top: 48px;
+    padding-bottom: 48px;
+
+    &__inner {
+        width: 100%;
+    }
+
+    &__nav {
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include sm-block  {
+            flex-direction: row;
+            margin-bottom: 46px;
+        }
+
+        &-item {
+            font-size: 18px;
+            line-height: 21px;
+            color: #545151;
+            border-radius: 150px;
+            padding: 18px 32px;
+            position: relative;
+            cursor: pointer;
+
+            &.active {
+                background: #0A3506;
+                color: #fff;
+
+                .yamogu & {
+                    background: #FCC020;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        border: 1px solid #FFFFFF;
+                        box-sizing: border-box;
+                        border-radius: 150px;
+                        top: 5px;
+                        bottom: 5px;
+                        right: 5px;
+                        left: 5px;
+                        margin: auto;
+
+                    }
+                }
+            }
+
+            @include sm-block {
+                & + & {
+                    margin-left: 10px;
+                }
+            }
+
+            .yamogu & {
+                font-family: Fregat, sans-serif;
+            }
+        }
+
+        &-text {
+            padding-bottom: 4px;
+            border-bottom: 1px dashed #0A3506;
+        }
+
+        .yamogu &-item.active &-text {
+            border-bottom-color: #FCC020;
+        }
+    }
+
+    &__tab {
+        position: relative;
+        display: none;
+        z-index: 1;
+
+        .yamogu & {
+            border-radius: 60px;
+            overflow: hidden;
+        }
+
+        &.active {
+            display: block;
+        }
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+        }
+    }
+
+}

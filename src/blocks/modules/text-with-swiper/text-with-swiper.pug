@@ -1,0 +1,22 @@
+mixin text-with-swiper
+    section.text-with-swiper
+        .container
+            .text-with-swiper__inner
+                article.text-with-swiper__data
+                    .text-with-swiper__title Лучшая одежда по лучшей цене
+                    .text-with-swiper__content
+                        p
+                            | Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                        p
+                            | Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                article.text-with-swiper__slider
+
+                    .slider.slider-sroller.js-slider-scroller
+                        .slider-wrap
+                            - let i = 0
+                            while (i < 4)
+                                - i++
+                                .slide
+                                    img(src='img/slide-scroller-img.jpg' alt="").slider__img
+                        .slider-scrollbar
+

@@ -1,40 +1,73 @@
 .header
 	border-bottom: 1px solid rgba(5, 36, 2, 0.3)
+
 .header-top
 	background: #0A3506
 	padding: 16px 0
+	.yamogu &
+		background-color: #844894
+		background-image: url('../img/pattern/yamogu-header.svg')
+		background-repeat: repeat-x
 	.container
 		display: flex
-		align-items: center
-		justify-content: space-between
+		flex-direction: column
+
+		@include lg-block
+			align-items: center
+			justify-content: space-between
+			flex-direction: row
+
 	a
-		font-family: 'Roboto'
+		display: inline-block
 		font-size: 13px
 		line-height: 15px
 		color: #FFFFFF
 		text-decoration: none
 	&--left
+		@include sm-block
+			margin-bottom: 0
+		margin-bottom: -5px
 		a
-			padding-right: 20px
 			margin-right: 20px
-			border-right: 1px solid #8E8E8E
+			margin-bottom: 5px
 			&:last-child
-				padding-right: 0
 				margin-left: 0
-				border: none
+			@include sm-block
+				padding-right: 20px
+				border-right: 1px solid #8E8E8E
+				margin-bottom: 0
+				.yamogu &
+					border-color: #fff
+				&:last-child
+					padding-right: 0
+					border: none
+
+
 	&--right
 		display: flex
-		justify-content: space-between
+		flex-direction: column
+		@include sm-block
+			justify-content: space-between
+			flex-direction: row
 		a
 			margin-right: 24px
 			&:last-child
 				margin-right: 0
 .header-top-block
-	flex-basis: 50%
-	position: relative
+	@include lg-block
+		flex-basis: 50%
+		position: relative
+		& + &
+			margin-top: 0
+	flex-basis: 100%
+	& + &
+		margin-top: 20px
 	.location
 		align-self: flex-start
 		border-bottom: 1px dashed #FFFFFF
+		margin-bottom: 7px
+		@include sm-block
+			margin-bottom: 0
 
 .download
 	position: relative
@@ -47,7 +80,7 @@
 		display: block
 		width: 8px
 		height: 11px
-		background: url('../../../img/arrow-load.svg')
+		background: url('../img/arrow-load.svg')
 
 .header-main
 	padding: 20px 0
@@ -55,21 +88,54 @@
 		display: flex
 		align-items: center
 		justify-content: space-between
+		flex-direction: column
+		@include md-block
+			flex-direction: row
 .header-main-block
 	display: flex
 	align-items: center
 	justify-content: space-between
-	flex-basis: 50%
+	flex-basis: 100%
+	width: 100%
+	@include xl-block
+		&:first-child,
+		&:last-child
+			flex-basis: 50%
+			margin-right: 0
+	@include md-block
+		&:first-child
+			flex-basis: 25%
+			margin-right: 15px
+			justify-content: flex-start
+		&:last-child
+			flex-basis: 75%
+			margin-top: 0
+			flex-wrap: nowrap
+	&:first-child
+		justify-content: center
+	&:last-child
+		margin-top: 15px
+		flex-wrap: wrap
+
 	.mail
-		font-family: 'Roboto'
 		font-style: italic
 		font-size: 15px
 		line-height: 18px
 		color: #C51D1B
 		text-decoration: none
+		@include sm-block
+			margin-right: 7px
+			margin-left: 7px
+
+		.yamogu &
+			color: #ED702B
 
 .schedule
-	font-family: 'Roboto'
+	@include sm-block
+		width: auto
+		margin-bottom: 0
+	width: 100%
+	margin-bottom: 10px
 	p
 		font-size: 14px
 		line-height: 16px

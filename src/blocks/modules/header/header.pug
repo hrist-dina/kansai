@@ -1,8 +1,9 @@
+- const getHeadName = () => yamogu ? 'Kansai' : 'YaMogu'
 header.header
 		.header-top
 			.container
 				.header-top-block.header-top--left
-					a(href="javascript:void(0);") YaMogu
+					a(href="javascript:void(0);")=getHeadName()
 					a(href="javascript:void(0);") На общую страницу
 					a.download(href="javascript:void(0);") Скачать презентацию
 				.header-top-block.header-top--right
@@ -16,7 +17,7 @@ header.header
 			.container
 				.header-main-block
 					.header-main-block__logo
-						img(src="./img/kansai.svg", alt="")
+						img(src=`./img/header/${yamogu ? 'yamogu' : 'kansai'}.svg`, alt="")
 				.header-main-block
 					.schedule
 						p Без обеда, без выходных

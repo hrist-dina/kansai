@@ -1,12 +1,13 @@
+- const getFooterName = () => yamogu ? 'Kansai' : 'YaMogu'
 footer
 	.container
 		.footer
 			.footer-block
 				.footer-logo
-					img(src="./img/footer-kansai-logo.svg", alt="")
+					img(src=`./img/footer-${yamogu ? 'yamogu' : 'kansai'}-logo.svg`, alt="")
 				ul
 					li
-						a(href="javascript:void(0);") YaMogu
+						a(href="javascript:void(0);")=getFooterName()
 					li
 						a(href="javascript:void(0);") На общую страницу
 					li

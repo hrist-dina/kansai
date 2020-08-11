@@ -1,8 +1,10 @@
 @import "libs";
 @import "style";
 @import "helpers/variables";
+@import "helpers/functions";
 @import "helpers/mixins";
 @import "general/fonts";
 @import "general/base";
+@import "general/ui-kit";
 @import "../blocks/components/components";
 @import "../blocks/modules/modules";

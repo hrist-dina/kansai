@@ -1,13 +1,13 @@
-.slider
-	.slider-wrap
-		.slide
-			img(src="./img/slide-img.jpg", alt="")
-		.slide
-			img(src="./img/slide-img.jpg", alt="")
-		.slide
-			img(src="./img/slide-img.jpg", alt="")
-		.slide
-			img(src="./img/slide-img.jpg", alt="")
-		.slide
-			img(src="./img/slide-img.jpg", alt="")
-	.slider-pagination
+
+mixin slider
+	include data
+	.slider.js-slider-simple
+		.slider-wrap
+			for item in slider
+				.slide
+					.slider__inner
+						.slider__data
+							.slider__sale -#{item.sale}%
+							.slider__sale-text=item.saleText
+						img(src=item.img, alt="").slider__img
+		.slider-pagination

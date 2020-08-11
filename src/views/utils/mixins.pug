@@ -1,0 +1,7 @@
+mixin field(name, placeholder, isRequired, modifLabel=null)
+    label.field.js-field(class=modifLabel)
+        span.field__placeholder
+            span.field__placeholder-text=placeholder
+            if isRequired
+                span.field__placeholder-req *
+        input.field__input.js-field-input(name=name type=type)&attributes(attributes)
