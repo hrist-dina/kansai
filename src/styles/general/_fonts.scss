@@ -7,3 +7,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.eot");
+    src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("../fonts/Montserrat-Bold.woff") format("woff"),
+        url("../fonts/Montserrat-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
