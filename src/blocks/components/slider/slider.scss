@@ -26,6 +26,7 @@
                 max-width: 300px;
                 height: 100%;
                 padding: 0;
+                border-radius: 50px;
             }
             padding: 20px;
             width: 100%;
@@ -35,6 +36,7 @@
             justify-content: center;
             flex-direction: column;
             left: 0;
+            overflow: hidden;
         }
 
     }
@@ -90,7 +92,7 @@
             background: transparent;
             padding: 0;
             text-transform: uppercase;
-            max-width: 300px;
+            max-width: 330px;
             @include lg-block {
                 font-size: 58px;
                 line-height: 68px;
