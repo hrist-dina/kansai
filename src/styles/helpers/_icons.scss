@@ -1,0 +1,45 @@
+@import "mixins";
+
+.icon {
+    @include outline-none;
+    @include transitionEaseOutQuint(background);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon-mobile-menu {
+    @include icon-mobile-menu(4px, 30px);
+    cursor: pointer;
+    background: #fff;
+
+    &:before {
+        @include icon-mobile-menu-before(4px, 30px, 10px, #fff);
+    }
+
+    &:after {
+        @include icon-mobile-menu-after(4px, 30px, -10px, #fff);
+    }
+
+    .active &,
+    &.active {
+        transition: 0.5s;
+        background: transparent;
+
+        &:before {
+            width: 30px;
+            transform: rotateZ(45deg) translate(-10px, -4px);
+        }
+
+        &:after {
+            width: 30px;
+            transform: rotateZ(-45deg) translate(-10px, 4px);
+        }
+    }
+
+    &.active-fixed {
+        position: fixed;
+        z-index: 101;
+        top: 25px;
+        right: 20px;
+    }
+}

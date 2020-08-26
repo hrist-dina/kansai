@@ -1,3 +1,5 @@
-import "%modules%/header/header.js";
-import "%modules%/footer/footer.js";
-import "%modules%/main/main.js";
+import Header from "%modules%/header/header";
+
+document.addEventListener("DOMContentLoaded", () => {
+	new Header();
+});

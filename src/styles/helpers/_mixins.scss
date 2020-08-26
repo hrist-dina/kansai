@@ -38,3 +38,31 @@
 @mixin transitionEaseOutQuint($properties, $duration: .6s, $delay:0s) {
     @include transitionSomeProps($properties, $duration, cubic-bezier(0.23, 1, 0.32, 1), $delay);
 }
+
+
+@mixin icon-mobile-menu($height, $width) {
+    position: relative;
+    width: $width;
+    height: $height;
+    transition-duration: 0.5s;
+}
+
+@mixin icon-mobile-menu-before($height, $width, $top, $bg-color: #000) {
+    content: "";
+    position: absolute;
+    top: $top;
+    width: $width;
+    height: $height;
+    transition-duration: 0.5s;
+    background-color: $bg-color;
+}
+
+@mixin icon-mobile-menu-after($height, $width, $top, $bg-color: #000) {
+    content: "";
+    position: absolute;
+    top: $top;
+    width: $width;
+    height: $height;
+    transition-duration: 0.5s;
+    background-color: $bg-color;
+}

@@ -1,5 +1,5 @@
 - const getHeadName = () => yamogu ? 'Kansai' : 'YaMogu'
-header.header
+header.header.js-header
 		.header-top
 			.container
 				.header-top-block.header-top--left
@@ -16,6 +16,8 @@ header.header
 		.header-main
 			.container
 				.header-main-block
+					.header-main-block__menu.js-header-menu-open
+						i.icon.icon-mobile-menu
 					.header-main-block__logo
 						img(src=`./img/header/${yamogu ? 'yamogu' : 'kansai'}.svg`, alt="")
 				.header-main-block
@@ -26,3 +28,18 @@ header.header
 							span (с 10:00 до 22:00)
 					a.mail(href="mailto:izaak@google.com") izaak@google.com
 					include ../../components/social/social
+				.header-mobile-menu
+					.header-mobile-menu__shedule Без обеда, без выходных
+					.header-mobile-menu__social
+						include ../../components/social/social
+					a.header-mobile-menu__mail(href="mailto:izaak@google.com") izaak@google.com
+					.header-mobile-menu__block
+						a(href="javascript:void(0);")=getHeadName()
+						a(href="javascript:void(0);") На общую страницу
+						a.download(href="javascript:void(0);") Скачать презентацию
+						a.location(href="javascript:void(0);") Мы находимся тут
+					.header-mobile-menu__block
+						a(href="javascript:void(0);") Вакансии
+						a(href="javascript:void(0);") Акции
+						a(href="javascript:void(0);") О компании
+

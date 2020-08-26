@@ -5,7 +5,8 @@
 	display: flex
 	align-items: center
 	width: 100%
-	height: 100vh
+	min-height: 100vh
+	height: 100%
 	flex-direction: column
 	@include lg-block
 		flex-direction: row
@@ -39,11 +40,13 @@
 		background: url('../img/arrow-btn.svg') no-repeat center right 30px
 		transition: 0.3s ease
 		margin-top: 40px
+		height: 63px
 		&:hover
 			background: url('../img/arrow-btn.svg') no-repeat center right 20px
 
 		@include sm-block
 			padding: 30px 108px 30px 50px
+			height: 83px
 			background-position: center right 50px
 			&:hover
 				background-position: center right 25px
